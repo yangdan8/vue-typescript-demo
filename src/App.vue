@@ -4,10 +4,11 @@
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import * as Vue from 'vue';
+export default Vue.extend({
   name: 'app'
-};
+});
 </script>
 
 <style scoped>
