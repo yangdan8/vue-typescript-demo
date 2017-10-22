@@ -1,0 +1,34 @@
+{
+    "compilerOptions": {
+        "outDir": "./types/",
+        "module": "es2015",
+        "target": "es5",
+        "strict": true,
+        "moduleResolution": "node",
+        "noImplicitAny": true,
+        "noImplicitThis": true,
+        "noImplicitReturns": true,
+        "noUnusedLocals": true,
+        "strictNullChecks": true,
+        "sourceMap": false,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "allowSyntheticDefaultImports": true,
+        "suppressImplicitAnyIndexErrors": true,
+        "declaration": true,
+        "stripInternal": true,
+        "lib": ["es6", "es2015.promise", "dom"],
+        "types": [
+            "node"
+        ],
+        "typeRoots": [
+            "node_modules/@types"
+        ]
+    },
+    "exclude": [
+        "node_modules", "dist"
+    ],
+    "include": [
+        "./src/**/*"
+    ]
+}
