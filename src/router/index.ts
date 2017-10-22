@@ -1,6 +1,5 @@
 import Vue from 'vue';
 import Router, { RouterOptions } from 'vue-router';
-import Login from '../components/account/login';
 
 Vue.use(Router);
 
@@ -9,7 +8,14 @@ export default new Router({
     {
       path: '/',
       name: 'account_login',
-      component: () => Login
+      components: {
+        Login: (resolve) => {
+          require.ensure([], () => {
+            const cmp = require('../components/account/login').default;
+            resolve(cmp);
+          });
+        }
+      }
     }
   ]
 } as RouterOptions);
