@@ -12,7 +12,7 @@ export default new Router({
       name: 'account_login',
       components: {
         Login: (resolve) => {
-          require.ensure([], () => {
+          require.ensure([], (require) => {
             const cmp = require('../components/account/login').default;
             resolve(cmp);
           });
