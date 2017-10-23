@@ -29,7 +29,6 @@
         "dist"
     ],
     "include": [
-        "./src/**/*",
-        "@types/webpack-env/index.d.ts"
+        "./src/**/*"
     ]
 }
