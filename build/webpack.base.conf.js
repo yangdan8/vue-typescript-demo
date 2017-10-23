@@ -78,6 +78,15 @@ module.exports = {
                     limit: 10000,
                     name: utils.assetsPath('fonts/[name].[hash:8].[ext]')
                 }
+            },
+            {
+                test: /\.json$/,
+                loader: 'file-loader',
+                include: [resolve('src/i18n')],
+                exclude: /node_modules/,
+                options: {
+                    name: utils.assetsPath('i18n/[name].[hash:8].[ext]')
+                }
             }
         ]
     }

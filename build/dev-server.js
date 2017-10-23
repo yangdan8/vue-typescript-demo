@@ -70,8 +70,8 @@ app.use(staticPath, express.static('./static'));
 
 const uri = 'http://localhost:' + port;
 
-const _resolve;
-const _reject;
+let _resolve;
+let _reject;
 const readyPromise = new Promise((resolve, reject) => {
     _resolve = resolve
     _reject = reject
