@@ -16,12 +16,13 @@ exports.assetsPath = function(_path) {
 
 exports.cssLoaders = function(options) {
     options = options || {};
+    const isSourceMap = !!options.sourceMap;
 
     const cssLoader = {
         loader: 'css-loader',
         options: {
             minimize: process.env.NODE_ENV === 'production',
-            sourceMap: options.sourceMap
+            sourceMap: isSourceMap
         }
     };
 
@@ -30,14 +31,14 @@ exports.cssLoaders = function(options) {
         const loaders = [cssLoader, {
             loader: 'postcss-loader',
             options: {
-                sourceMap: false
+                sourceMap: isSourceMap
             }
         }];
         if (loader) {
             loaders.push({
                 loader: loader + '-loader',
                 options: Object.assign({}, loaderOptions, {
-                    sourceMap: options.sourceMap
+                    sourceMap: isSourceMap
                 })
             });
         }

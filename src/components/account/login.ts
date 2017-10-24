@@ -1,5 +1,5 @@
 import Vue from "vue";
-import Component from "vue-class-component/lib";
+import Component from "vue-class-component";
 require("./login.scss");
 
 @Component({
