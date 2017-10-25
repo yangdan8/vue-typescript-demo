@@ -1,7 +1,8 @@
 /// <reference path="../../node_modules/@types/webpack-env/index.d.ts" />
+
 import Vue from 'vue';
 import Router, { RouterOptions } from 'vue-router';
-import Login from '../components/account/login.ts';
+const Login = () => import('../components/account/login');
 
 Vue.use(Router);
 
@@ -10,15 +11,7 @@ export default new Router({
     {
       path: '/',
       name: 'account_login',
-      components: {
-        Login: Login // require('../components/account/login.ts')
-      // Login: resolve => require(['../components/account/login.ts'], resolve)
-      // Login: (resolve) => {
-      //   require.ensure([], (require) => {
-      //     const cmp = require('../components/account/login').default;
-      //     resolve(cmp);
-      //   }, 'Login');
-       }
+      component: Login
     }
   ]
 } as RouterOptions);

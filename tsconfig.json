@@ -1,7 +1,7 @@
 {
     "compilerOptions": {
         "outDir": "./types/",
-        "module": "es2015",
+        "module": "amd",
         "target": "es5",
         "strict": true,
         "moduleResolution": "node",
