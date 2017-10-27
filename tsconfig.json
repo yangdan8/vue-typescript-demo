@@ -22,8 +22,7 @@
             "node"
         ],
         "typeRoots": [
-            "node_modules/@types",
-            "./types-extend"
+            "node_modules/@types"
         ]
     },
     "exclude": [
