@@ -15,7 +15,7 @@
         "emitDecoratorMetadata": true,
         "allowSyntheticDefaultImports": true,
         "suppressImplicitAnyIndexErrors": true,
-        "declaration": true,
+        "declaration": false,
         "stripInternal": true,
         "lib": ["es6", "es2015.promise", "dom"],
         "types": [
