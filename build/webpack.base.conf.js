@@ -19,26 +19,20 @@ module.exports = {
             config.build.assetsPublicPath : config.dev.assetsPublicPath
     },
     resolve: {
-        extensions: ['.ts', '.tsx', '.css', '.scss', '.sass', '.stylus', '.styl', '.js', '.vue', '.json'],
+        extensions: ['.ts', '.css', '.scss', '.js', '.json'],
         alias: {
-            'vue$': 'vue/dist/vue.esm.js',
-            '@': resolve('src'),
+            '@': resolve('src')
         }
     },
     module: {
         rules: [{
-                test: /\.(js|vue)$/,
+                test: /\.js$/,
                 loader: 'eslint-loader',
                 enforce: 'pre',
                 include: [resolve('src'), resolve('test')],
                 options: {
                     formatter: require('eslint-friendly-formatter')
                 }
-            },
-            {
-                test: /\.vue$/,
-                loader: 'vue-loader',
-                options: vueLoaderConfig
             },
             {
                 test: /\.js$/,
@@ -51,7 +45,7 @@ module.exports = {
                 include: [resolve('src')]
             },
             {
-                test: /\.tsx?$/,
+                test: /\.ts$/,
                 loader: 'ts-loader',
                 include: [resolve('src')]
             },
